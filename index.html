@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GK Vander</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav ul li a");
+        const currentLocation = window.location.href;
+
+        const homeLink = document.querySelector("nav ul li:first-child a");
+        homeLink.classList.add("active");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((navLink) => {
+              navLink.classList.remove("active");
+            });
+            link.classList.add("active");
+          });
+        });
+
+        const menuIcon = document.querySelector(".menu-icon");
+        const closeIcon = document.querySelector(".close-icon");
+        const navDrawer = document.querySelector(".nav-drawer");
+
+        menuIcon.addEventListener("click", function () {
+          navDrawer.classList.add("active");
+        });
+
+        closeIcon.addEventListener("click", function () {
+          navDrawer.classList.remove("active");
+        });
+
+        const gkTopicLink = document.querySelector(".gk-topic-link");
+        const gkDropdown = document.querySelector(".gk-dropdown");
+
+        gkTopicLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          gkDropdown.classList.toggle("active");
+        });
+
+        const drawerGKTopicLink = document.querySelector(
+          ".drawer-gk-topic-link"
+        );
+        const drawerGKDropdown = document.querySelector(".drawer-gk-dropdown");
+
+        drawerGKTopicLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          drawerGKDropdown.classList.toggle("active");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="#" class="nav-link gk-topic-link">GK Topic</a>
+            <ul class="gk-dropdown">
+              <li><a href="#">Coding</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Literature</a></li>
+            </ul>
+          </li>
+          <li><a href="contact02.html" class="nav-link">Contact US</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+        </ul>
+        <div>
+          <a href="login.php" class="login-btn">Log In</a>
+          <a href="register.php" class="signup-btn">Sign Up</a>
+        </div>
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <div class="nav-drawer">
+        <div class="close-icon">&times;</div>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="#" class="nav-link drawer-gk-topic-link">GK Topic</a>
+            <ul class="drawer-gk-dropdown">
+              <li><a href="#">Coding</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Literature</a></li>
+            </ul>
+          </li>
+          <li><a href="contact02.html" class="nav-link">Contact US</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="login.php" class="nav-link login-btn">Log In</a></li>
+          <li>
+            <a href="register.php" class="nav-link signup-btn">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <img src="images/font-logo.png" class="feature-img anim" />
+        <h1 class="anim">Gain<br />General Knowledge</h1>
+        <p class="anim">
+          World General knowledge English Android Application,more friendly user
+          interface,you'll make me happy with your valuable comments.
+        </p>
+        <a href="login.php" class="get-start anim">Get Start</a>
+      </div>
+    </div>
+
+    <section class="future-section anim">
+      <div class="card">
+        <h2>Future of Learning</h2>
+        <p>
+          Embrace the future of learning with our cutting-edge educational tools
+          designed to make learning intuitive and engaging for all.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Interactive Experiences</h2>
+        <p>
+          Dive into interactive experiences that blur the lines between virtual
+          and reality, fostering deep understanding and retention.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Global Knowledge Community</h2>
+        <p>
+          Join our global knowledge community and explore diverse perspectives,
+          expanding your understanding of the world around you.
+        </p>
+      </div>
+    </section>
+    <footer id="footer">
+      <h2>GK Vander &copy; all rights reserved</h2>
+    </footer>
+  </body>
+</html>
